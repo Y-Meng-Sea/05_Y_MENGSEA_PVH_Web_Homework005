@@ -11,7 +11,7 @@ const layout = ({children}) => {
         </aside>
         <main className='bg-whiteSmokeCustom w-full h-screen flex flex-col items-center py-5'>
             <Search/>
-            <div className='w-[90%] mt-5 py-5 px-5 bg-white rounded-3xl h-full'>
+            <div className='w-[90%] px-5 bg-white rounded-3xl h-full overflow-y-auto [scrollbar-width:none]'>
               <Filter/>
               {children}
             </div>
