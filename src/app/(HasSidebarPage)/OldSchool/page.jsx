@@ -1,12 +1,9 @@
 "use server"
 import React from 'react'
-import imag from '@/assets/images/study.jpg'
+import {getAllProduct} from "@/service/getProductService.js"
 const page = async () => {
-  const data = await fetch("https://nextjs-homework005.vercel.app/api/cartoon");
-  const dataJson = await data.json();
-  console.log()
+  const dataJson = await getAllProduct();
   return (
-
     <div className='m-5 grid grid-cols-3 gap-4'>
       {dataJson.payload.map((data)=>{
         return(

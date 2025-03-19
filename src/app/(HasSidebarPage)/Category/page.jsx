@@ -1,11 +1,9 @@
 import React from "react";
-import image from "@/assets/images/study.jpg";
+import {getAllBooks} from "@/service/getProductService"
 import Image from "next/image";
 import { Button } from "@heroui/react";
 const page = async () => {
-    const data = await fetch('https://nextjs-homework005.vercel.app/api/book');
-    const jsonData = await data.json();
-    console.log(jsonData.payload)
+     const jsonData = await getAllBooks();
      return (
           <div className="p-5">
                <div className="flex justify-evenly flex-wrap">
