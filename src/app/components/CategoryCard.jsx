@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@heroui/react";
-
+import Link from "next/link";
 const CategoryCard = async ({ data }) => {
      return (
           <div className="w-2/5 bg-blueSlateCustom relative grid grid-cols-2 items-center justify-between p-6 rounded-3xl mt-20">
@@ -12,7 +12,7 @@ const CategoryCard = async ({ data }) => {
                          className="rounded-2xl absolute -top-[30%] h-[90%] object-cover object-center left-6"
                     />
                     <Button className="absolute bottom-[10%] bg-red-600 uppercase text-[10px]" radius="md">
-                         read full article
+                         <Link href={`/CategoryDetail?id=${data.id}`}>read full article</Link>
                     </Button>
                </div>
                <div>

@@ -39,3 +39,15 @@ export const searchCartoon = async (search) => {
      const res = await req.json();
      return res.payload;
 };
+
+export const getCartoonById = async (id) => {
+     const req = await fetch(`https://nextjs-homework005.vercel.app/api/cartoon/${id}`);
+     const res = await req.json();
+     return res.payload;
+};
+
+export const getCategoryById = async (id) => {
+     const req = await fetch(`https://nextjs-homework005.vercel.app/api/book/${id}`);
+     const res = await req.json();
+     return res.payload;
+};
