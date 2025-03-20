@@ -9,5 +9,8 @@ import travelIcon from './travel.svg'
 import sportIcon from './sport.svg'
 import settingIcon from './setting.svg'
 import writingIcon from './writing.svg'
-
-export {bookIcon,homeIcon,movieIcon,musicIcon,oldSchoolIcon,photographyIcon,technologyIcon,travelIcon,sportIcon,settingIcon,writingIcon}
+import viewIcon from './view-icon.svg'
+import bookIconBlue from './bookIconBlue.svg'
+import homeIconBlue from './homeIconBlue.svg'
+import bookOpen from './bookOpen.svg'
+export {bookIconBlue,homeIconBlue,bookOpen,bookIcon,homeIcon,movieIcon,musicIcon,oldSchoolIcon,photographyIcon,technologyIcon,travelIcon,sportIcon,settingIcon,writingIcon,viewIcon}

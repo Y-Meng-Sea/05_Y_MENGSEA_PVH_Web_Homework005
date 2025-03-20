@@ -1,38 +1,48 @@
 // pages/book.js
-import React from 'react';
-import img from '@/assets/images/study.jpg'
-import Image from 'next/image';
+import React from "react";
+import img from "@/assets/images/study.jpg";
+import Image from "next/image";
+import {viewIcon} from "@/assets/icons/icons.js"
 const page = () => {
-  return (
-    <div className="relative px-10 py-12 max-w-5xl mx-auto">
-      {/* Breadcrumbs */}
-      <nav className="text-sm text-gray-500 mb-4">
-        <span className="text-blue-600">Home</span> &gt; <span>Book Categories</span> &gt; <span className="text-red-600">How Do You Live?</span>
-      </nav>
-
-      <div className="relative flex flex-col md:flex-row">
-        {/* Text Content */}
-        <div className="md:w-3/5">
-          <h1 className="text-3xl font-bold">How Do You Live?</h1>
-          <p className="text-gray-700 font-semibold mb-4">by Black Monster</p>
-          <p className="text-gray-600 leading-relaxed">
-            "How Do You Live?" (君たちはどう生きるか, Kimitachi wa Dō Ikiru ka) by Genzaburō Yoshino is a philosophical coming-of-age novel ...
-          </p>
-          <p className="text-gray-600 leading-relaxed mt-4">
-            The book isn’t just about a boy growing up; it’s a call to the readers to reflect on their own lives...
-          </p>
+     return (
+        <div className="bg-white mt-32 max-h-full p-20 pb-14 rounded-[50px]">
+        <div className="flex justify-end relative">
+             <Image
+                  alt="cover"
+                  width={300}
+                  height={350}
+                  className="rounded-3xl drop-shadow-xl absolute -top-52"
+                  src={img}
+             />
         </div>
-
-        {/* Image */}
-        <div className="md:w-2/5 relative">
-          <div className="absolute right-0 top-1/2 md:top-0 w-40 md:w-48 lg:w-56 shadow-lg">
-            <Image src={img} alt="How Do You Live?" layout="responsive" width={200} height={300} className="rounded-lg" />
-          </div>
+        <div className="space-y-5 mt-48">
+             <div className="space-y-3">
+                  <h2 className="text-2xl font-medium">Tom &amp; Jerry</h2>
+                  <h3 className="text-xl">
+                       by
+                       <span className="text-deep-teal font-medium capitalize">
+                            William Hanna and Joseph Barbera
+                       </span>
+                  </h3>
+                  <div className="text-lg text-deep-teal font-medium flex gap-3">
+                        <Image src={viewIcon} alt="view icon" />
+                       <p>|</p>
+                       <p>1940</p>
+                  </div>
+             </div>
+             <p className="text-justify">
+                  Tom &amp; Jerry is a beloved animated series that centers around the ongoing rivalry
+                  between Tom, a cat, and Jerry, a mouse. The show is primarily known for its slapstick
+                  comedy, with Tom constantly attempting (and failing) to catch Jerry, leading to a
+                  variety of humorous, chaotic situations. The series debuted in 1940 by MGM
+                  (Metro-Goldwyn-Mayer) and quickly became a hallmark of animation with its expressive
+                  characters and exaggerated physical humor. Despite the simple premise, Tom &amp;
+                  Jerry has become an enduring cultural phenomenon, winning several Academy Awards for
+                  animated shorts and creating a lasting legacy in animation history.
+             </p>
         </div>
-      </div>
-
-    </div>
-  );
+   </div>
+     );
 };
 
 export default page;
