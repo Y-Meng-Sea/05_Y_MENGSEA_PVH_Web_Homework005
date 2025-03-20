@@ -35,7 +35,12 @@ const Filter = () => {
      return (
           <div className="sticky top-0 z-10 bg-white pt-5">
                <div className={`w-full flex ${pathName == "/Home" ? "justify-start" : "justify-between"}`}>
-                    <Button className="text-blueCustom px-5 py-2 bg-gray-100 hover:bg-gray-200 transition-all rounded-xl mb-2">
+                    <Button
+                         onPress={() => {
+                              const basePath = pathName.split("?")[0];
+                              router.push(basePath);
+                         }}
+                         className="text-blueCustom px-5 py-2 bg-gray-100 hover:bg-gray-200 transition-all rounded-xl mb-2">
                          {handlePathName}
                     </Button>
                     {pathName == "/Category" && (

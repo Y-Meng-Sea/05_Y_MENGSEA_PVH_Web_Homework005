@@ -22,8 +22,20 @@ export const getAllBookCategorys = async () => {
 };
 
 export const getAllCartoons = async () => {
-     const res = await fetch("https://nextjs-homework005.vercel.app/api/cartoon_genre");
+     const req = await fetch("https://nextjs-homework005.vercel.app/api/cartoon_genre");
 
-     const cartoons = await res.json();
+     const cartoons = await req.json();
      return cartoons.payload;
+};
+
+export const searchCategory = async (search) => {
+     const req = await fetch(`https://nextjs-homework005.vercel.app/api/book?search=${search}`);
+     const res = await req.json();
+     return res.payload;
+};
+
+export const searchCartoon = async (search) => {
+     const req = await fetch(`https://nextjs-homework005.vercel.app/api/cartoon?search=${search}`);
+     const res = await req.json();
+     return res.payload;
 };
